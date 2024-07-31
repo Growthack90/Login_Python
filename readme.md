@@ -9,11 +9,10 @@
 - Install PIP
 - Install dependencies:
     * pip install setuptools
-    * $ pip install flask
+    * pip install flask
 
 - Check if installed correctly:
-    * $ pip list
+    * pip list
 
 - Run App
     * flask --app app run
-
