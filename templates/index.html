@@ -7,7 +7,10 @@
 </head>
 <body>
     <h1>Benvenuto nella mia applicazione Flask!</h1>
-    <p>Questa è una semplice pagina HTML servita da Flask.</p>
-    <p><a href="{{ url_for('login') }}">Login</a></p>
+    {% if current_user.is_authenticated %}
+        <p>Ciao, {{ current_user.id }}! <a href="{{ url_for('logout') }}">Logout</a></p>
+    {% else %}
+        <p><a href="{{ url_for('login') }}">Login</a></p>
+    {% endif %}
 </body>
 </html>
